@@ -1,0 +1,116 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple music player</title>
+</head>
+<body>
+    <h1>MUSIC Player</h1>
+    <audio id="music-player" controls>
+        <source src="./music/track1.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // Add event listener to play the next song when the current one ends
+        var player = document.getElementById('music-player');
+        player.addEventListener('ended', playNextSong);
+
+
+        //Array of songs
+        var songs = [
+            './music/track1.mp1',
+            './music/track1.mp2',
+            './music/track1.mp3'
+        ];
+
+        var currentSongIndex = 0;
+
+        function playNextSong(){
+            currentSongIndex++;
+            if (currentSongIndex >= songs.length) {
+                currentSongIndex = 0;//loop back to the first song
+            }
+            player.src = songs[currentSongIndex];
+            player.play();
+        }
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Music Player</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.player {
+  margin-top: 30px;
+}
+
+.controls button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.play-btn {
+  background-color: #2196f3;
+}
+
+.progress-bar {
+  background-color: #ccc;
+  height: 10px;
+  margin-top: 10px;
+}
+
+.progress {
+  background-color: #4caf50;
+  height: 100%;
+  /* width: 50%; */
+}
+
+    </style>
+
+</head>
+<body>
+  <div class="container">
+    <h1>Music Player</h1>
+    <div class="player">
+      <div class="controls">
+        <button class="prev-btn">&#8249;</button>
+        <button class="play-btn">Play</button>
+        <button class="next-btn">&#8250;</button>
+      </div>
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
