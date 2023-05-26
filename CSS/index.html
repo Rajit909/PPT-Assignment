@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Periodic Table of Elements, in CSS! </title>
+  <link rel="stylesheet" type="text/css">
+  <link mily=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'> <!-- Google Fonts -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script> <!-- jQUery -->
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <style>
+    html {
+      font-size: 16px;
+      font-family: 'Open Sans Condensed', sans-serif;
+    }
+
+    body {
+      background-image: url("bg.png");
+    }
+
+    #menu {
+      width: 400px;
+      margin: 0px auto;
+      webkit-text-shadow: 1px 1px 1px #000;
+      moz-text-shadow: 1px 1px 1px #000;
+      text-shadow: 1px 1px 1px #000;
+      font-size: 40px;
+    }
+
+    section {
+      max-width: 1064px;
+      margin: 0px auto;
+      overflow: hidden;
+      min-width: 300px;
+    }
+
+    #infoContainer {
+      position: absolute;
+      left: 43%;
+      width: 500px;
+      top: 78px;
+      text-align: center;
+      margin-left: -250px;
+    }
+
+    #container {
+      width: 100%;
+    }
+
+    #container:before,
+    #container:after {
+      content: "";
+      display: table;
+    }
+
+    #container:after {
+      clear: both;
+    }
+
+    /* For IE 6/7 (trigger hasLayout) */
+    #container {
+      zoom: 1;
+    }
+
+    .box {
+      border: 1px solid black;
+      padding: 20%;
+      text-align: center;
+      font-size: 1.63em;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      margin: 2px;
+      -webkit-box-shadow: 1px 1px 1px #ccc;
+      -moz-box-shadow: 1px 1px 1px #ccc;
+      box-shadow: 1.5px 2px 2px #000;
+      text-shadow: 1px 1px 1px #ccc;
+    }
+
+    .box a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .box:hover {
+      box-shadow: 1px 1px 1px #ccc;
+      cursor: pointer;
+      text-shadow: 1px 1px 1px #000;
+    }
+
+    .firstCol {
+      background-color: #FF9999
+    }
+
+    .secondCol {
+      background-color: #99CCFF;
+    }
+
+    .thirdCol {
+      background-color: #FDFF8C;
+    }
+
+    .lastCol:nth-child(n) {
+      background-color: #FDFF8C;
+    }
+
+    #panelOne {
+      float: left;
+      width: 5.5556%;
+    }
+
+    #panelTwo {
+      float: left;
+      width: 5.5556%;
+      margin-top: 6%;
+      /* background-color: #FF9999; */
+    }
+
+    #panelThree {
+      float: left;
+      width: 5.5556%;
+      margin-top: 18%;
+    }
+
+    #lowerContainer {
+      float: right;
+      margin-top: 1%;
+      width: 88%;
+    }
+
+    .bottom {
+      float: left;
+      width: 6.66666667%;
+      background-color: #9BFF99;
+    }
+
+    @media screen and (max-width: 1000px) {
+      #panelTwo {
+        margin-top: 6.3%;
+      }
+
+      #panelThree {
+        margin-top: 18.9%;
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      #panelTwo {
+        margin-top: 6.8%;
+      }
+
+      #panelThree {
+        margin-top: 20.5%;
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      .box {
+        font-size: 1em;
+      }
+
+      #panelTwo {
+        margin-top: 5.7%;
+      }
+
+      #panelThree {
+        margin-top: 17%;
+      }
+    }
+
+    @media screen and (max-width: 700px) {
+
+      #panelTwo {
+        margin-top: 6.2%;
+      }
+
+      #panelThree {
+        margin-top: 19%;
+      }
+    }
+
+    @media screen and (max-width: 550px) {
+      .box {
+        font-size: .5em;
+      }
+
+      #panelTwo {
+        margin-top: 5.5%;
+      }
+
+      #panelThree {
+        margin-top: 15.8%;
+      }
+
+      #menu {
+        width: 300px;
+        font-size: 28px;
+      }
+
+      #infoContainer {
+        top: 50px;
+      }
+    }
+
+    @media screen and (max-width: 400px) {
+      #panelTwo {
+        margin-top: 7.3%;
+      }
+
+      #panelThree {
+        margin-top: 21.6%;
+      }
+    }
+
+    #clear {
+      clear: both;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="menu"> The Periodic Table of Elements </div>
+  <section>
+    <div>
+      <table cellpadding="7" cellspacing="23">
+        <tr>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>4</th>
+          <th>5</th>
+          <th>6</th>
+          <th>7</th>
+          <th>8</th>
+          <th>9</th>
+          <th>10</th>
+          <th>11</th>
+          <th>12</th>
+          <th>13</th>
+          <th>14</th>
+          <th>15</th>
+          <th>16</th>
+          <th>17</th>
+          <th>18</th>
+        </tr>
+      </table>
+    </div>
+    <div id="container">
+      <div id="panelOne" class="firstCol">
+        <div class="box"><a> H </a></div>
+        <div class="box"><a> Li </a></div>
+        <div class="box"><a> Na </a></div>
+        <div class="box"><a> K </a></div>
+        <div class="box"><a> Rb </a></div>
+        <div class="box"><a> Cs </a></div>
+        <div class="box"><a> Fr </a></div>
+      </div>
+      <div id="panelTwo" class="firstCol">
+        <div class="box"><a> Be </a></div>
+        <div class="box"><a> Mg </a></div>
+        <div class="box"><a> Ca</a> </div>
+        <div class="box"><a> Sr </a></div>
+        <div class="box"><a> Ba </aium>
+        </div>
+        <div class="box"><a> Ra </a></div>
+      </div>
+      <div id="panelThree" class="secondCol">
+        <div class="box"><a> Sc</a> </div>
+        <div class="box"><a> Y </a></div>
+        <div class="box"><a> Lu </a></div>
+        <div class="box"><a> Lr </a></div>
+      </div>
+      <div id="panelThree" class="secondCol">
+        <div class="box"><a> Ti </a></div>
+        <div class="box"><a> Zr </a></div>
+        <div class="box"><a> Hf </a></div>
+        <div class="box"><a> Rf </a></div>
+      </div>
+      <div id="panelThree" class="secondCol">
+        <div class="box"><a> V </a></div>
+        <div class="box"><a> Nb </a></div>
+        <div class="box"><a> Ta </a></div>
+        <div class="box"><a> Db </a></div>
+      </div>
+      <div id="panelThree" class="secondCol">
+        <div class="box"><a> Cr </a></div>
+        <div class="box"><a> Mo </a></div>
+        <div class="box"><a> W</a> </div>
+        <div class="box"><a> Sg</a> </div>
+      </div>
+      <div id="panelThree" class="secondCol">
+        <div class="box"><a> Mn</a> </div>
+        <div class="box"><a> Tc </a></div>
+        <div class="box"><a> Re </a></div>
+        <div class="box"><a> Bh </a></div>
+      </div>
+      <div id="panelThree" class="secondCol">
+        <div class="box"><a> Fe </a></div>
+        <div class="box"><a> Ru </a></div>
+        <div class="box"><a> Os </a></div>
+        <div class="box"><a> Hs </a></div>
+      </div>
+      <div id="panelThree" class="secondCol">
+        <div class="box"><a> Co </a></div>
+        <div class="box"><a> Rh</a></div>
+        <div class="box"><a> Ir</a> </div>
+        <div class="box"><a> Mt </a></div>
+      </div>
+      <div id="panelThree" class="secondCol">
+        <div class="box"><a> Ni </a></div>
+        <div class="box"><a> Pd </a></div>
+        <div class="box"><a> Pt </a></div>
+        <div class="box"><a> Ds </a></div>
+      </div>
+      <div id="panelThree" class="secondCol">
+        <div class="box"><a> Cu</a> </div>
+        <div class="box"><a>Ag </a></div>
+        <div class="box"><a> Au</a> </div>
+        <div class="box"><a> Rg</a> </div>
+      </div>
+      <div id="panelThree" class="secondCol">
+        <div class="box"><a> Zn</a> </div>
+        <div class="box"><a> Cd</a> </div>
+        <div class="box"><a> Hg</a> </div>
+        <div class="box"><a> Cn</a> </div>
+      </div>
+      <div id="panelTwo" class="thirdCol">
+        <div class="box"><a> B </a></div>
+        <div class="box"><a> Al</a> </div>
+        <div class="box"><a> Ga</a> </div>
+        <div class="box"><a> In </a></div>
+        <div class="box"><a> Ti </a></div>
+        <div class="box"><a> Uut </a></div>
+      </div>
+      <div id="panelTwo" class="thirdCol">
+        <div class="box"><a> C</a> </div>
+        <div class="box"><a> Si</a> </div>
+        <div class="box"><a> Ge</a> </div>
+        <div class="box"> <a>Sn</a> </div>
+        <div class="box"> <a>Rb</a> </div>
+        <div class="box"> <a>Fl</a> </div>
+      </div>
+      <div id="panelTwo" class="thirdCol">
+        <div class="box"><a>N </a></div>
+        <div class="box"><a>P </a></div>
+        <div class="box"><a>As</a> </div>
+        <div class="box"><a>Sb </a></div>
+        <div class="box"><a> Bi</a> </div>
+        <div class="box"><a> Uup</a> </div>
+      </div>
+      <div id="panelTwo" class="thirdCol">
+        <div class="box"> <a>O</a> </div>
+        <div class="box"> <a>S </a></div>
+        <div class="box"><a> Se</a> </div>
+        <div class="box"> <a>Te</a> </div>
+        <div class="box"> <a>Po </a></div>
+        <div class="box"> <a>Lv </a></div>
+      </div>
+      <div id="panelTwo" class="thirdCol">
+        <div class="box"> <a>F </a></div>
+        <div class="box"> <a>Cl</a> </div>
+        <div class="box"> <a>Br</a> </div>
+        <div class="box"> <a>I </a></div>
+        <div class="box"><a> At </a></div>
+        <div class="box"><a> Uus</a> </div>
+      </div>
+      <div id="panelOne" class="lastCol">
+        <div class="box firstCol"> <a>He </a></div>
+        <div class="box"> <a>Ne</a> </div>
+        <div class="box"> <a>Ar </a></div>
+        <div class="box"> <a>Kr </a></div>
+        <div class="box"><a> Xe </a></div>
+        <div class="box"><a> Rn </a></div>
+        <div class="box"><a> Uuo </a></div>
+      </div>
+    </div>
+    <div id="clear"></div>
+    <div id="lowerContainer">
+      <div class="bottom">
+        <div class="box"><a> La </a></div>
+        <div class="box"><a> Ac </a></div>
+      </div>
+      <div class="bottom">
+        <div class="box"><a> Ce </a></div>
+        <div class="box"><a> Th </a></div>
+      </div>
+      <div class="bottom">
+        <div class="box"><a> Pr </a></div>
+        <div class="box"><a> Pa </a></div>
+      </div>
+      <div class="bottom">
+        <div class="box"><a> Nd</a> </div>
+        <div class="box"><a> U </a></div>
+      </div>
+      <div class="bottom">
+        <div class="box"><a> Pm </a></div>
+        <div class="box"><a> Np </a></div>
+      </div>
+      <div class="bottom">
+        <div class="box"><a> Sm </a></div>
+        <div class="box"><a> Pu </a></div>
+      </div>
+      <div class="bottom">
+        <div class="box"><a> Eu </a></div>
+        <div class="box"><a> Am </a></div>
+      </div>
+      <div class="bottom">
+        <div class="box"><a> Gd </a></div>
+        <div class="box"><a> Cm </a></div>
+      </div>
+      <div class="bottom">
+        <div class="box"><a> Tb</a> </div>
+        <div class="box"><a> Bk</a> </div>
+      </div>
+      <div class="bottom">
+        <div class="box"><a> Dy </a></div>
+        <div class="box"><a> Cf </a></div>
+      </div>
+      <div class="bottom">
+        <div class="box"> <a>Ho </a></div>
+        <div class="box"><a> Es</a> </div>
+      </div>
+      <div class="bottom">
+        <div class="box"><a> Er </a></div>
+        <div class="box"><a> Fm</a> </div>
+      </div>
+      <div class="bottom">
+        <div class="box"><a> Tm </a></div>
+        <div class="box"> <a>Md </a></div>
+      </div>
+      <div class="bottom">
+        <div class="box"><a> Yb </a></div>
+        <div class="box"><a> No</a> </div>
+      </div>
+
+  </section>
+</body>
+
+</html>
