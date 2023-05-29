@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debouncing in JavaScript</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="searchInput" placeholder="Search...">
+
+        <div id="searchResults"></div>
+
+        <script>
+
+            //Debounce function implementation
+            function debounce(func, delay){
+                let timeoutId;
+
+                return function(){
+                    clearTimeout(timeoutId);
+                    timeoutId = setTimeout(func, delay);
+                };
+            }
+
+            // function to perform search 
+            function performSearch(){
+                const searchText = document.getElementById('searchInput').value;
+
+                //simulate search operation
+                //Replace this with your actual search logic
+                console.log('Searching for:', searchText);
+
+                //Display search results
+                document.getElementById('searchResults').innerText = `Showing results for: ${searchText}`;
+            }
+
+              // Debounced version of the search function
+
+              const debouncedSearch = debounce(performSearch, 500);
+
+              // Event listener for input changes
+              document.getElementById('searchInput').addEventListener('input',debouncedSearch)
+
+        </script>
+    </div>
+</body>
+</html>
