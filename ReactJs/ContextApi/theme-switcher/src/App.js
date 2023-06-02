@@ -1,12 +1,14 @@
+import React from 'react';
+import ThemeProvider from './ThemeProvider';
+import Dashboard from './Dashboard';
+
 
 function App() {
   return (
    <>
-   <div>
-    <h1>
-      Hello react
-    </h1>
-   </div>
+    <ThemeProvider>
+      <Dashboard />
+    </ThemeProvider>
    </>
   );
 }
