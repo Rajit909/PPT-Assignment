@@ -6,9 +6,9 @@ const Todo = ({ todo, dispatch }) => {
   };
 
   return (
-    <div>
-      <span>{todo.text}</span>
-      <button onClick={handleDelete}>Delete</button>
+    <div className="todo">
+      <span className="todo-text">{todo.text}</span>
+      <button onClick={handleDelete} className="delete-button">Delete</button>
     </div>
   );
 };

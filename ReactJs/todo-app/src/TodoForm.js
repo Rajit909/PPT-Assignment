@@ -11,14 +11,15 @@ const TodoForm = ({ dispatch }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="todo-form">
       <input
         type="text"
         placeholder="Enter a new todo"
         value={text}
         onChange={(e) => setText(e.target.value)}
+        className="todo-input"
       />
-      <button type="submit">Add</button>
+      <button type="submit" className="add-button">Add</button>
     </form>
   );
 };
