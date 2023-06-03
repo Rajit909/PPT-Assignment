@@ -1,4 +1,5 @@
 .todo-form {
+<<<<<<< HEAD
     margin-bottom: 20px;
   }
   
@@ -40,3 +41,45 @@
     cursor: pointer;
   }
   
+=======
+  margin-bottom: 20px;
+}
+
+.todo-input {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.add-button {
+  padding: 8px 12px;
+  font-size: 16px;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.todo-text {
+  flex: 1;
+  font-size: 16px;
+}
+
+.delete-button {
+  padding: 5px 10px;
+  background-color: #f44336;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+>>>>>>> c57636ea3610e613fa1cc43784e337466c6ab64b
