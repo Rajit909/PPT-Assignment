@@ -1,25 +1,42 @@
-import logo from './logo.svg';
+import React, { useReducer } from 'react';
 import './App.css';
+import Todo from './Todo';
+import TodoForm from './TodoForm';
 
-function App() {
+const initialState = {
+  todos: [],
+};
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'ADD_TODO':
+      return {
+        todos: [
+          ...state.todos,
+          { id: Date.now(), text: action.payload },
+        ],
+      };
+    case 'DELETE_TODO':
+      return {
+        todos: state.todos.filter((todo) => todo.id !== action.payload),
+      };
+    default:
+      throw new Error('Unsupported action type');
+  }
+};
+
+const App = () => {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Todo App</h1>
+      <TodoForm dispatch={dispatch} />
+      {state.todos.map((todo) => (
+        <Todo key={todo.id} todo={todo} dispatch={dispatch} />
+      ))}
     </div>
   );
-}
+};
 
 export default App;
