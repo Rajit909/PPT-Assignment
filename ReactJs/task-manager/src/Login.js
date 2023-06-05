@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { Redirect } from 'react-router-dom';
 
 const Login = ({ onLogin }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [redirectToDashboard, setRedirectToDashboard] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,11 +21,16 @@ const Login = ({ onLogin }) => {
     if (response.ok) {
       const { token } = await response.json();
       onLogin(token); // Pass the token to the parent component
+      setRedirectToDashboard(true);
     } else {
       // Handle invalid login
       console.log('Invalid login');
     }
   };
+
+  if (redirectToDashboard) {
+    return <Redirect to="/dashboard" />;
+  }
 
   return (
     <div>
